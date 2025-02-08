@@ -24,5 +24,5 @@ To predict the stability of microproteins, we developed a machine learning model
 `stability_model/data_predict.ipynb : ` Jupyter notebook for predicting the stability of unseen microproteins using the trained model. <br>
 `stability_model/best_mlp.pth` The saved weights of the trained MLP model, which can be loaded for making stability predictions.<br>
 `stability_model/microprotein_db_seq.csv : ` Contains the names and sequences of all the microproteins included in the study. <br>
-`stability_model/microprotein_db_predicted_stability.csv : ` Contains the predicted stability values for all microproteins using the `best_mlp.pth` model. 
+`stability_model/microprotein_db_predicted_stability.csv : ` Contains the predicted stability values for all microproteins using the model. 
 
