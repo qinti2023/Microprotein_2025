@@ -16,4 +16,11 @@ sh batch_calculate_cm.sh
 ### Reference
 > Godzik A, Skolnick J. Flexible algorithm for direct multiple alignment of protein structures and sequences. Computer applications in the biosciences: CABIOS. 1994 Dec 1;10(6):587-96
 ## 2. Microprotein Stability Model
+### Overview
+To predict the stability of microproteins, we developed a machine learning model based on their sequence features. Microproteins were labeled as stable or unstable based on predefined stability scores, and sequence embeddings were extracted using the ESM-2 model (specifically the 33rd layer representations). These embeddings were then pooled and fed into a Multilayer Perceptron (MLP) for classification. The model was optimized using Optuna for hyperparameter tuning and trained using a weighted random sampler to address class imbalance. 
+### Layout
+`stability_model/model_data.csv : ` Contains the labeled microprotein sequences and their corresponding stability scores used for model training. <br>
+`stability_model/stability_model.ipynb : ` Jupyter notebook for training the MLP model using the extracted sequence features and stability labels. <br>
+`stability_model/data_predict.ipynb : ` Jupyter notebook for predicting the stability of unseen microproteins using the trained model. <br>
+`stability_model/best_mlp.pth` The saved weights of the trained MLP model, which can be loaded for making stability predictions.
 
